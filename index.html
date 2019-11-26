@@ -1,1 +1,289 @@
-Hello World
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0025)https://yuke93.github.io/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=800">
+  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+
+  <!-- Meta tags for search engines to crawl -->
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="XU RUI&#39;s homepage. Ph.D. student at The Chinese University of Hong Kong.">
+    <meta name="keywords" content="xu rui, rui xu, cuhk, xurui, homepage, nbeirui, nbei, phd, tsinghua, computer vision">
+  <style type="text/css">
+    /* Color scheme stolen from Sergey Karayev */
+    
+    a {
+      color: #1772d0;
+      text-decoration: none;
+    }
+    
+    a:focus,
+    a:hover {
+      color: #f09228;
+      text-decoration: none;
+    }
+    
+    body,
+    td,
+    th,
+    tr,
+    p,
+    a {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px
+    }
+    
+    strong {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+    
+	red {
+		color: #FF0000;
+	}
+	
+    heading {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 22px;
+    }
+    
+    papertitle {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 17px;
+      font-weight: 700
+    }
+    
+    name {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 32px;
+    }
+    
+    .one {
+      width: 180px;
+      height: 180px;
+      position: relative;
+    }
+    
+    .two {
+      width: 180px;
+      height: 180px;
+      position: absolute;
+	  /*
+	  top: 50%;
+	  left: 50%;
+	  -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      */
+	  transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+    
+    .fade {
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+    
+    span.highlight {
+      background-color: #ffffd0;
+    }
+  </style>
+  <link rel="icon" type="image/png" href="https://nbei.github.io/resources/RuiXu.png">
+  <title>Rui Xu</title>
+  
+  <link href="./resources/css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
+    <tbody><tr>
+      <td>
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tbody><tr>
+            <td width="75%" valign="middle">
+              <p align="center">
+                <name>Rui Xu</name>
+              </p>
+              <p> He is currently a 2nd-year PhD candidate in the <a href="http://mmlab.ie.cuhk.edu.hk/">Multimedia Laboratory</a>, The Chinese University of Hong Kong.
+				  His supervisor is <a href="https://www.ie.cuhk.edu.hk/people/xotang.shtml">Prof. Xiaoou Tang</a>, 
+				  and he works closely with <a href="http://personal.ie.cuhk.edu.hk/~ccloy/">Prof. Chen Change Loy</a> and <a href="http://bzhou.ie.cuhk.edu.hk/">Prof. Bolei Zhou</a>.
+              </p>
+			  <p>
+                  He got his B.Eng. degree in the Department of Electronic Engineering, Tsinghua University.
+              </p>
+              <p align="center">
+                <a href="mailto:xr018@ie.cuhk.edu.hk">Email</a> &nbsp;/&nbsp;
+                <a href="https://scholar.google.com/citations?user=1xn5GHgAAAAJ&hl=zh-CN">Google Scholar</a> &nbsp;/&nbsp;
+				<a href="https://github.com/nbei">GitHub</a>
+              </p>
+            </td>
+            <td width="33%">
+              <img src="./resources/RuiXu.jpg" width="160">
+            </td>
+          </tr>
+        </tbody></table>
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tbody><tr>
+            <td width="100%" valign="middle">
+              <heading>Research</heading>
+              <p>
+                He is interested in deep learning and its application for computer vision. He is now working on image/video inpainting and image synthesis.  
+                He has previous research experience in image/video segmentation, detection and instance segmentation.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+    
+    <!-- RobNet 2019 Arxiv -->
+    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <tbody><tr onmouseout="dni_stop()" onmouseover="dni_start()">
+        <td width="25%">
+          <div class="one" align="center" top="50%">
+            <div class="two" id="dni_image" style="opacity: 0;"><img src="./resources/RobNet.png" width="180"></div>
+            <img src="./resources/RobNet.png" width="180">
+          </div>
+          <script type="text/javascript">
+            function dni_start() {
+              document.getElementById('dni_image').style.opacity = "1";
+            }
+
+            function dni_stop() {
+              document.getElementById('dni_image').style.opacity = "0";
+            }
+            dni_stop()
+          </script>
+        </td>
+        <td valign="middle" width="75%">
+          <a href="https://arxiv.org/pdf/1911.10695.pdf">
+            <papertitle>When NAS Meets Robustness:
+              In Search of Robust Architectures against Adversarial Attacks</papertitle>
+          </a>
+          <br><br>
+          <a href="https://scholar.google.com/citations?user=Hq2unJcAAAAJ&hl=zh-CN">Minghao Guo</a>,
+          <a href="http://www.mit.edu/~yuzhe/">Yuzhe Yang</a>,
+          <strong>Rui Xu</strong>,
+          <a href="https://liuziwei7.github.io/">Ziwei Liu</a>
+          <br>
+          Tech Report, 2019
+          <br>
+          [<a href="https://arxiv.org/pdf/1911.10695.pdf">PDF</a>]
+          <br>
+              </td>
+            </tr>
+      </tbody></table>
+
+
+    <!-- CARAFE 2019 ICCV -->
+    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+      <tbody><tr onmouseout="dni_stop()" onmouseover="dni_start()">
+        <td width="25%">
+          <div class="one" align="center" top="50%">
+            <div class="two" id="dni_image" style="opacity: 0;"><img src="./resources/carafe.png" width="180"></div>
+            <img src="./resources/carafe.png" width="180">
+          </div>
+          <script type="text/javascript">
+            function dni_start() {
+              document.getElementById('dni_image').style.opacity = "1";
+            }
+
+            function dni_stop() {
+              document.getElementById('dni_image').style.opacity = "0";
+            }
+            dni_stop()
+          </script>
+        </td>
+        <td valign="middle" width="75%">
+          <a href="https://arxiv.org/pdf/1905.02188.pdf">
+            <papertitle>CARAFE: Content-Aware ReAssembly of FEatures</papertitle>
+          </a>
+          <br><br>
+          <a href="https://scholar.google.com.hk/citations?user=GDvt570AAAAJ&hl=zh-CN">Jiaqi Wang</a>,
+          <a href="http://chenkai.site/">Kai Chen</a>,
+          <strong>Rui Xu</strong>,
+          <a href="https://liuziwei7.github.io/">Ziwei Liu</a>,
+          <a href="http://personal.ie.cuhk.edu.hk/~ccloy/">Chen Change Loy</a>
+          <a href="http://dahua.me/">Dahua Lin</a>
+          <br>
+          ICCV, 2019, (Oral)
+          <br>
+          [<a href="https://arxiv.org/pdf/1905.02188.pdf">PDF</a>]
+          [<a href="https://github.com/open-mmlab/mmdetection/pull/1583">Codes</a>]
+          <br>
+                <p></p>
+                <p>We have presented Content-Aware ReAssembly of FEatures (CARAFE), a universal, lightweight and highly effective upsampling operator. It consistently boosts the performances on standard benchmarks in object detection, instance/semantic segmentation and inpainting. </p>
+              </td>
+            </tr>
+      </tbody></table>
+
+		<!-- DFVI 2019 CVPR -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tbody><tr onmouseout="dni_stop()" onmouseover="dni_start()">
+            <td width="25%">
+              <div class="one" align="center" top="50%">
+                <div class="two" id="dni_image" style="opacity: 0;"><img src="./resources/movie-new.png" width="180"></div>
+                <img src="./resources/movie-new.png" width="180">
+              </div>
+              <script type="text/javascript">
+                function dni_start() {
+                  document.getElementById('dni_image').style.opacity = "1";
+                }
+
+                function dni_stop() {
+                  document.getElementById('dni_image').style.opacity = "0";
+                }
+                dni_stop()
+              </script>
+            </td>
+            <td valign="middle" width="75%">
+              <a href="https://arxiv.org/abs/1905.02884">
+                <papertitle>Deep Flow-Guided Video Inpainting</papertitle>
+              </a>
+              <br><br>
+              <strong>Rui Xu</strong>,
+              <a href="https://scholar.google.com.hk/citations?user=udZam0oAAAAJ&hl=zh-CN">Xiaoxiao Li</a>,
+              <a href="http://bzhou.ie.cuhk.edu.hk/">Bolei Zhou</a>,
+              <a href="http://personal.ie.cuhk.edu.hk/~ccloy/">Chen Change Loy</a>
+              <br>
+              CVPR, 2019
+              <br>
+			  [<a href="https://arxiv.org/abs/1905.02884">PDF</a>]
+			  [<a href="https://nbei.github.io/video-inpainting.html">Project Page</a>]
+			  [<a href="https://github.com/nbei/Deep-Flow-Guided-Video-Inpainting">Codes</a>]
+			  <br>
+              <p></p>
+              <p>We propose Deep Flow-Guided Video Inpainting, a simple yet effective approach to solve the problem of video inpainting. You can watch our video demo at this <a href='https://www.youtube.com/watch?v=LIJPUsrwx5E'>link</a>. </p>
+            </td>
+          </tr>
+		</tbody></table>
+		 
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tbody><tr>
+            <td>
+              <br>
+              <p align="right">
+                <font size="2">
+                  Thanks <a href="https://jonbarron.info/">Jon Barron</a> for sharing the <a href="https://github.com/jonbarron/website">website codes</a>.
+                </font>
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+         <!--–– Please delete this script if you use this HTML. ––-->
+        <script type="text/javascript">
+          var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+          document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script><script src="./resources/ga.js" type="text/javascript"></script>
+        <script type="text/javascript">
+          try {
+            var pageTracker = _gat._getTracker("UA-7580334-1");
+            pageTracker._trackPageview();
+          } catch (err) {}
+        </script>
+        </td>
+    </tr>
+  </tbody></table>
+
+
+
+</body></html>
