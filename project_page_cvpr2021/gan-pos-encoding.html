@@ -1,0 +1,200 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Positional Encoding as Spatial Inductive Bias in GANs</title>
+
+	<!-- Meta tags for search engines to crawl -->
+	<meta name="robots" content="index,follow">
+	<meta name="description" content="Positional Encoding in GANs">
+	<meta name="keywords" content="positional encoding, gan, spatial inductive bias, stylegan2">
+
+	<!-- Fonts and stuff -->
+	<link href=" ./gan-pos-encoding/css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="./gan-pos-encoding/project.css" media="screen">
+	<link rel="stylesheet" type="text/css" media="screen" href="./gan-pos-encoding/iconize.css">
+	<script type="text/javascript" async="" src="./gan-pos-encoding/ga.js.download"></script>
+	<script async="" src="./gan-pos-encoding/prettify.js.download"></script>
+
+	<script type="text/javascript">
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-22940424-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function () {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+	</script>
+
+</head>
+
+<body>
+	<div id="content">
+		<div id="content-inner">
+
+			<div class="section head">
+				<h1>Positional Encoding as Spatial Inductive Bias in GANs</h1>
+
+				<div class="authors">
+					<a href="https://nbei.github.io/">Rui
+						Xu<sup>1</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="https://xinntao.github.io/">Xintao
+						Wang<sup>3</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="http://chenkai.site/#home">Kai
+						Chen<sup>4</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="http://bzhou.ie.cuhk.edu.hk/">Bolei Zhou<sup>1</sup></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="http://personal.ie.cuhk.edu.hk/~ccloy/">Chen Change Loy<sup>2</sup></a>
+				</div>
+
+				<div class="affiliations">
+					<sup>1</sup> <a href="http://mmlab.ie.cuhk.edu.hk/" target="_blank">CUHK - SenseTime Joint Lab, The
+						Chinese University of Hong Kong</a> <br>
+					<sup>2</sup> <a>Nanyang Technological University, Singapore</a> <br>
+					<sup>3</sup> <a>Applied Research Center, Tencent PCG</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<sup>4</sup> <a>SenseTime Research</a>
+				</div>
+
+				<div class="venue"></div>
+			</div>
+
+
+			<div class="section demo">
+
+				<br>
+				<center><iframe width="840" height="480" src="https://www.youtube.com/embed/n6B01YqC1ng">
+					</iframe></center>
+				<br>
+				<center>
+					<a href="https://www.bilibili.com/video/BV1yV4118756/"> Watch in
+						BiliBili.com</a> &nbsp;&nbsp;&nbsp;
+					<a href="https://www.dropbox.com/s/8snc6knhhm6bpyh/supp_video_release.mp4?dl=0"> Download
+						Video</a>
+				</center>
+			</div>
+
+			<div class="section motivation">
+				<h2>Motivation</h2>
+				<br>
+				<center><img src="./gan-pos-encoding/teaser-web-singan.png" border="0" width="95%"></center>
+				<br>
+				<p>
+					SinGAN shows impressive capability in learning internal patch distribution despite its limited
+					effective receptive field.
+					We are interested in knowing how such a translation-invariant convolutional generator could capture
+					the global structure with just a spatially i.i.d. input.
+					In this work, taking SinGAN and StyleGAN2 as examples, we show that such capability, to a large
+					extent, is brought by the implicit positional encoding when using zero padding in the generators.
+					However, such an implicit positional encoding introduces unbalanced spatial bias over the whole
+					image space.
+					To offer a better spatial inductive bias, we investigate alternative positional encodings and
+					analyze their effects.
+					The impact of positional encoding to the convolutional generator can be obviously observed in the
+					following picture.
+
+				</p>
+				<center><img src="./gan-pos-encoding/singan-pos-impact.png" border="0" width="95%"></center>
+				<br>
+			</div>
+
+			<div class="section analysis">
+				<h2>Investigation and Analyses</h2>
+				<br>
+				<center><img src="./gan-pos-encoding/pos-encode-space.png" border="0" width="95%"></center>
+				<br>
+				<p>
+					We study the implicit positional encoding brought by zero padding through detailed theoretical and
+					empirical analyses.
+					Meanwhile, explicit positional encodings are also investigated in this work for offering better
+					spatial inductive bias to the translation-invariant convolutional generator.
+					An intuitive illustration for the image space portrayed by different positional encodings is
+					presented in this figure.
+				</p>
+			</div>
+
+			<div class="section application">
+				<h2>Application in StyleGAN2 and SinGAN</h2>
+				<br>
+				<center><img src="./gan-pos-encoding/ms-1024x1024.png" border="0" width="95%"></center>
+				<p>
+					Based on a more flexible positional encoding explicitly, we propose a new multi-scale training
+					strategy (MS-PIE) and demonstrate its effectiveness in the state-of-the-art unconditional generator
+					StyleGAN2.
+					As shown in this figure, with our MS-PIE, a single 256x256 StyleGAN2-C1 model can achieve
+					compelling
+					multi-scale generation quality at 1024x1024, 512x512, and 256x256 pixels (from left to right).
+					Besides, we customize an image manipulation algorithm for the model trained in MS-PIE, where we can
+					achieve high-reolution manipulation with a single 256x256 backbone.
+				</p>
+
+				<center><img src="./gan-pos-encoding/singan-results.png" border="0" width="95%"></center>
+				<p>
+					Besides, the explicit spatial inductive bias substantially improve SinGAN for more versatile image
+					manipulation and the robustness to the challenging cases.
+					As shown in the last case, SPE can keep a reasonable spatial relationship between patches, where the
+					width of the car is modified within a reasonable value.
+					On the contrary, the Cartesian gird tends to stretch the object with the global structure retained
+					by
+					explicit spatial anchors.
+				</p>
+			</div>
+
+			<div class="section materials">
+				<h2>Materials</h2>
+				<center>
+					<ul>
+
+						<li class="grid">
+							<div class="griditem">
+								<a href="https://arxiv.org/pdf/1905.02884.pdf" target="_blank" class="imageLink"><img
+										src="./gan-pos-encoding/paper.jpg" border="0" width="50%"></a><br>
+								<a href="https://arxiv.org/pdf/1905.02884.pdf"
+									target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Full Paper
+									with
+									Appendix</a>
+							</div>
+						</li>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+						<li class="grid">
+							<div class="griditem">
+								<a><img src="./gan-pos-encoding/code.png"></a><br>
+								<a>Codes will be released.</a>
+							</div>
+						</li>
+
+					</ul>
+				</center>
+			</div>
+
+			<br>
+
+			<div class="section citation">
+				<h2>Citation</h2>
+				<div class="section bibtex">
+					<pre>@InProceedings{Xu_2020_Pos,
+author = {Xu, Rui and Wang, Xintao and Chen, Kai and Zhou, Bolei and Loy, Chen Change},
+title = {Positional Encoding as Spatial Inductive Bias in GANs},
+booktitle = {arxiv},
+month = {December},
+year = {2020}
+}</pre>
+				</div>
+			</div>
+
+		</div>
+		<!--=================Contact==========================-->
+		<div class="section contact">
+			<h2 id="contact">Contact</h2>
+			<p>If you have any question, please contact Rui Xu at <strong>xr018@ie.cuhk.edu.hk</strong>.</p> <br>
+		</div>
+	</div>
+
+</body>
+
+</html>
