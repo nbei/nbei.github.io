@@ -148,6 +148,52 @@
             </tbody>
           </table>
 
+          <!-- Positional Encoding 2021 CVPR -->
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr onmouseout="dni_stop()" onmouseover="dni_start()">
+                <td width="25%">
+                  <div class="one" align="center" top="50%">
+                    <div class="two" id="dni_image" style="opacity: 0;"><img src="resources/teaser-plane.png"
+                        width="180">
+                    </div>
+                    <img src="resources/teaser-plane.png" width="180">
+                  </div>
+                  <script type="text/javascript">
+                    function dni_start() {
+                      document.getElementById('dni_image').style.opacity = "1";
+                    }
+
+                    function dni_stop() {
+                      document.getElementById('dni_image').style.opacity = "0";
+                    }
+                    dni_stop()
+                  </script>
+                </td>
+                <td valign="middle" width="75%">
+                  <a href="https://arxiv.org/pdf/2012.05217.pdf">
+                    <papertitle>Positional Encoding as Spatial Inductive Bias in GANs</papertitle>
+                  </a>
+                  <br><br>
+                  <strong>Rui Xu</strong>,
+                  <a href="https://xinntao.github.io/">Xintao Wang</a>,
+                  <a href="http://chenkai.site/">Kai Chen</a>,
+                  <a href="http://bzhou.ie.cuhk.edu.hk/">Bolei Zhou</a>,
+                  <a href="http://personal.ie.cuhk.edu.hk/~ccloy/">Chen Change Loy</a>
+                  <br>
+                  CVPR, 2021
+                  <br>
+                  [<a href="https://arxiv.org/pdf/2012.05217.pdf">PDF</a>], [<a
+                    href="https://nbei.github.io/gan-pos-encoding.html">Project Page</a>]
+                  <br>
+                  <p>We investigate the phenomenon of implicit poistional encoding serving as spatial inductive bias in
+                    current GANs. Based on explicit positional encoding, we provide a novel
+                    training strategy, named MS-PIE, to train a single multi-scale GAN model.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
           <!-- RobNet 2019 Arxiv -->
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
             <tbody>
@@ -180,7 +226,7 @@
                   <strong>Rui Xu</strong>,
                   <a href="https://liuziwei7.github.io/">Ziwei Liu</a>
                   <br>
-                  Tech Report, 2019
+                  CVPR, 2020
                   <br>
                   [<a href="https://arxiv.org/pdf/1911.10695.pdf">PDF</a>]
                   <br>
