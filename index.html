@@ -184,11 +184,58 @@
                   CVPR, 2021
                   <br>
                   [<a href="https://arxiv.org/pdf/2012.05217.pdf">PDF</a>], [<a
-                    href="https://nbei.github.io/gan-pos-encoding.html">Project Page</a>]
+                    href="https://nbei.github.io/gan-pos-encoding.html">Project Page</a>], [<a
+                    href="https://github.com/open-mmlab/mmgeneration">Code</a>]
                   <br>
                   <p>We investigate the phenomenon of implicit poistional encoding serving as spatial inductive bias in
                     current GANs. Based on explicit positional encoding, we provide a novel
                     training strategy, named MS-PIE, to train a single multi-scale GAN model.</p>
+                  <br>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- T-MAD -->
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr onmouseout="dni_stop()" onmouseover="dni_start()">
+                <td width="25%">
+                  <div class="one" align="center" top="50%">
+                    <div class="two" id="dni_image" style="opacity: 0;"><img src="resources/teaser-plane.png"
+                        width="180">
+                    </div>
+                    <img src="resources/tmad-places-compare-large-min.png" width="180">
+                  </div>
+                  <script type="text/javascript">
+                    function dni_start() {
+                      document.getElementById('dni_image').style.opacity = "1";
+                    }
+
+                    function dni_stop() {
+                      document.getElementById('dni_image').style.opacity = "0";
+                    }
+                    dni_stop()
+                  </script>
+                </td>
+                <td valign="middle" width="75%">
+                  <a href="https://arxiv.org/pdf/2009.13240.pdf">
+                    <papertitle>Texture Memory-Augmented Deep Patch-Based Image Inpainting</papertitle>
+                  </a>
+                  <br><br>
+                  <strong>Rui Xu</strong>,
+                  <a href="https://www.minghaoguo.com/">Minghao Guo</a>,
+                  <a href="https://scholar.google.com.hk/citations?user=GDvt570AAAAJ&hl=zh-CN">Jiaqi Wang</a>,
+                  <a href="https://scholar.google.com.hk/citations?user=udZam0oAAAAJ&hl=zh-CN">Xiaoxiao
+                    Li</a>
+                  <a href="http://bzhou.ie.cuhk.edu.hk/">Bolei Zhou</a>,
+                  <a href="http://personal.ie.cuhk.edu.hk/~ccloy/">Chen Change Loy</a>
+                  [<a href="https://arxiv.org/pdf/2009.13240.pdf">PDF</a>], [<a
+                    href="https://nbei.github.io/tmad.html">Project Page</a>]
+                  <br>
+                  Submitted to TIP
+                  <p> We propose a new deep inpainting framework where texture
+                    generation is guided by a texture memory of patch samples extracted from unmasked regions. </p>
                 </td>
               </tr>
             </tbody>
