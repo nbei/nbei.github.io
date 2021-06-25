@@ -148,6 +148,55 @@
             </tbody>
           </table>
 
+          <!-- CARAFE++ T-PAMI -->
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr onmouseout="dni_stop()" onmouseover="dni_start()">
+                <td width="25%">
+                  <div class="one" align="center" top="50%">
+                    <div class="two" id="dni_image" style="opacity: 0;"><img src="./resources/carafe.png" width="180">
+                    </div>
+                    <img src="./resources/carafe.png" width="180">
+                  </div>
+                  <script type="text/javascript">
+                    function dni_start() {
+                      document.getElementById('dni_image').style.opacity = "1";
+                    }
+
+                    function dni_stop() {
+                      document.getElementById('dni_image').style.opacity = "0";
+                    }
+                    dni_stop()
+                  </script>
+                </td>
+                <td valign="middle" width="75%">
+                  <a href="https://arxiv.org/pdf/1905.02188.pdf">
+                    <papertitle>CARAFE++: Unified Content-Aware ReAssembly of FEatures</papertitle>
+                  </a>
+                  <br><br>
+                  <a href="https://scholar.google.com.hk/citations?user=GDvt570AAAAJ&hl=zh-CN">Jiaqi Wang</a>,
+                  <a href="http://chenkai.site/">Kai Chen</a>,
+                  <strong>Rui Xu</strong>,
+                  <a href="https://liuziwei7.github.io/">Ziwei Liu</a>,
+                  <a href="http://personal.ie.cuhk.edu.hk/~ccloy/">Chen Change Loy</a>,
+                  <a href="http://dahua.me/">Dahua Lin</a>
+                  <br>
+                  T-PAMI
+                  <br>
+                  [<a href="https://arxiv.org/pdf/2012.04733.pdf">PDF</a>]
+                  [<a href="https://github.com/open-mmlab/mmdetection/pull/1583">Codes</a>]
+                  <br>
+                  <p></p>
+                  <p>We have improve CARAFE in this work and offer a new universal, lightweight and highly effective
+                    feature reassemble operator, termed CARAFE++. It consistently boosts the performances on standard
+                    benchmarks
+                    in object detection, instance/semantic segmentation and inpainting. </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
           <!-- Positional Encoding 2021 CVPR -->
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
             <tbody>
