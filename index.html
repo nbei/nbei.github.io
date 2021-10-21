@@ -148,6 +148,53 @@
             </tbody>
           </table>
 
+          <!-- stransgan -->
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr onmouseout="dni_stop()" onmouseover="dni_start()">
+                <td width="25%">
+                  <div class="one" align="center" top="50%">
+                    <div class="two" id="dni_image" style="opacity: 0;"><img src="resources/web-fig.jpg"
+                        width="180">
+                    </div>
+                    <img src="resources/web-fig.jpg" width="180">
+                  </div>
+                  <script type="text/javascript">
+                    function dni_start() {
+                      document.getElementById('dni_image').style.opacity = "1";
+                    }
+
+                    function dni_stop() {
+                      document.getElementById('dni_image').style.opacity = "0";
+                    }
+                    dni_stop()
+                  </script>
+                </td>
+                <td valign="middle" width="75%">
+                  <a href="">
+                    <papertitle>STransGAN: An Empirical Study on Transformer in GANs</papertitle>
+                  </a>
+                  <br><br>
+                  <strong>Rui Xu</strong>,
+                  <a href="https://sites.google.com/view/xiangyuxu">Xiangyu Xu</a>,
+                  <a href="http://chenkai.site/">Kai Chen</a>,
+                  <a href="http://bzhou.ie.cuhk.edu.hk/">Bolei Zhou</a>,
+                  <a href="http://personal.ie.cuhk.edu.hk/~ccloy/">Chen Change Loy</a>
+                  <br>
+                  Technical Report.
+                  <br>
+                  [<a href="">PDF</a>], [<a
+                    href="https://nbei.github.io/stransgan.html">Project Page</a>]
+                  <br>
+                  <p>In this paper, we conduct a comprehensive empirical study to investigate the intrinsic properties of Transformer in GAN for high-fidelity image synthesis.
+                    Our analysis highlights the importance of feature locality in image generation.
+                    We also examine the influence of residual connections in self-attention layers and propose a novel way to reduce their negative impacts on learning discriminators and conditional generators.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
           <!-- CARAFE++ T-PAMI -->
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
             <tbody>
