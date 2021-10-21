@@ -109,7 +109,7 @@
 				<p>
 					We observe that conventional approaches of injecting conditional class information do not work well for Transformer-based conditional GAN.
 					The main culprit lies in the large information flow through the residual connections in the Transformer generator.
-					If the conditional information is injected within the main branch(Also known as the residual mapping path in ResNet.),
+					If the conditional information is injected within the main branch (Also known as the residual mapping path in ResNet.),
 					it will largely be ignored and contribute little to the final outputs.
 					We present a viable way of adopting conditional normalization layers in the trunk, which helps retain conditional information throughout the Transformer generator.
 				</p>
@@ -120,8 +120,8 @@
 				<br>
 				<center><img src="./stransgan/res-table.png" border="0" width="95%"></center>
 				<p>
-					In unconditional generation, STrans-G significantly outperforms all previous methods in CelebA 64<sup>2</sup>.
-					It also achieves competitive performance in the high-resolution setting of FFHQ 256<sup>2</sup>.
+					In unconditional generation, STrans-G significantly outperforms all previous methods in CelebA 64x64.
+					It also achieves competitive performance in the high-resolution setting of FFHQ 256x256.
 					For conditional image generation, with the proposed AdaIN-T layer, STrans-G improves the SOTA Inception Score from 10.14 to 11.62 on CIFAR10.
 					Besides, for the first time, our study shows the potential of Transformers in the challenging ImageNet dataset.
 				</p>
